@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Запись к мастеру</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">Барбершоп · 4 мастера · 10:00–22:00</p>
+      <h1>Запись к мастеру</h1>
+    </header>
+    <section class="card" aria-labelledby="form-title">
+      <h2 id="form-title">Новая запись</h2>
+      <p class="intro" id="preview-note">Макет формы. Записи пока не сохраняются. Расписание мастеров и обзор администратора появятся после реализации.</p>
+      <div aria-describedby="preview-note">
+        <div class="field">
+          <label for="master">Мастер</label>
+          <select id="master" name="master" required>
+            <option value="master-1">Мастер 1</option>
+            <option value="master-2">Мастер 2</option>
+            <option value="master-3">Мастер 3</option>
+            <option value="master-4">Мастер 4</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="date">Дата</label>
+          <input id="date" name="date" type="date" min="0001-01-01" max="9999-12-31" required>
+        </div>
+        <div class="field">
+          <label for="start">Начало</label>
+          <input id="start" name="start" type="time" min="10:00" max="21:30" step="1800" value="10:00" required>
+        </div>
+        <div class="field">
+          <label for="duration">Длительность</label>
+          <select id="duration" name="duration" required>
+            <option value="30">30 минут</option>
+            <option value="60">60 минут</option>
+            <option value="90">90 минут</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="gender">Пол клиента</label>
+          <select id="gender" name="gender" required>
+            <option value="">Выберите</option>
+            <option value="male">Мужчина</option>
+            <option value="female">Женщина</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="age">Возраст, лет</label>
+          <input id="age" name="age" type="number" min="0" max="120" step="1" inputmode="numeric" placeholder="28" required>
+        </div>
+        <div class="field">
+          <label for="category">Категория стрижки</label>
+          <select id="category" name="category" required>
+            <option value="">Выберите категорию</option>
+            <option value="mens">Мужская стрижка</option>
+            <option value="womens">Женская стрижка</option>
+            <option value="childrens">Детская стрижка</option>
+            <option value="other">Другое</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="difficulty">Сложность</label>
+          <select id="difficulty" name="difficulty" required>
+            <option value="">Выберите сложность</option>
+            <option value="easy">Простая</option>
+            <option value="medium">Средняя</option>
+            <option value="hard">Сложная</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="comment">Комментарий <span>(необязательно)</span></label>
+          <textarea id="comment" name="comment" rows="3" placeholder="Пожелания к стрижке"></textarea>
+        </div>
+        <button type="button" disabled aria-describedby="preview-note">Записать (позже)</button>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
